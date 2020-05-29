@@ -1,0 +1,458 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified 
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+/* ---- loader ----  */
+.loader {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader img {
+  width: 25%;
+}
+
+.loader.hidden {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* ---- base ----  */
+
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: 10px;
+  scroll-behavior: smooth;
+  font-size: calc(1em + 1vw)
+}
+
+body{
+  font:normal 75% Arial, Helvetica, sans-serif;
+  color: #eee;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+p{
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+header{
+  width: 100%;
+  height: 100vh;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+section{
+  width: 100%;
+  height: 100%;
+  transition: transform 0.25s;
+  will-change: transform;
+
+}
+
+/* ---- nav ---- */
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.top-nav {
+  position: fixed;
+  display: flex;
+  color: #fff;
+  font-family: modern;
+  flex-direction: row;
+  flex-wrap: wrap;
+  z-index: 50;
+
+}
+
+.nav-bg{
+  position: fixed;
+  width:100%;
+  height: 12%;
+  background: linear-gradient(#000 40%, #0000);
+  transition: .5s;
+  opacity: 0;
+  z-index: 30;
+}
+
+.top-nav ul li{
+  list-style: none;
+  margin: 10px;
+  cursor: pointer;
+
+}
+
+.top-nav ul{
+  display: inline-flex;
+  margin: 50px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+
+.logo h1{
+  margin-top: -15%;
+  margin-right: 48%;
+  font-family: lg-font;
+  font-size: 50px;
+  color: #e6a12c;
+}
+
+li{
+  margin: 0 2rem;
+}
+
+.nav-link{
+  color: #eee;
+  font-family: regular;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 1rem;
+}
+
+.nav-link2{
+  color: #eee;
+}
+
+.nav-link:hover,
+
+.nav-link:focus{
+  background: linear-gradient(to top, #ff2a00, #ffff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent; 
+}
+
+
+.loading-text{
+  position: absolute;
+  top:45%;
+  left: 5%;
+  z-index: 1;
+  transition: transform 0.25s;
+  will-change: transform;
+}
+
+.loading-text h1{
+  font-family: modern;
+  color: #eee;
+  font-size: 4vw;
+
+}
+
+.loading-text h2 {
+  font-size: 2vw;
+  color: #eee;
+  font-family: regular;
+  font-weight: 300;
+}
+
+
+/* ---- particles.js container ---- */
+@font-face {
+    font-family: 'modern'; /*a name to be used later*/
+    src: url('Ailerons-Regular.otf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'regular'; /*a name to be used later*/
+    src: url('Ikaros-Light.otf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'lg-font'; /*a name to be used later*/
+    src: url('Anurati-Regular.otf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Barlow'; /*a name to be used later*/
+    src: url('Barlow-Black.ttf'); /*URL to font*/
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('https://cdn.dribbble.com/users/1770290/screenshots/6158205/bg_75.gif');
+  background-size: cover;
+  background-position: center;}
+
+/* ---- about center ---- */
+.AboutMe {
+  padding: 15% 0;
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('https://images.wallpapersden.com/image/download/orange-gradient-abstract_64895_3840x2160.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.box{
+  width: 30%;
+  max-width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 60px;
+  text-align: center;
+  margin: auto;
+  color: white;
+  margin-left: 10%;
+}
+.box-img{
+  border-radius: 50%;
+  width: 30%;
+}
+.box h1{
+  font-size: 2vw;
+  letter-spacing: 4px;
+  font-weight: 100;
+  font-family: modern;
+  margin-top: 5%;
+}
+.box p{
+  text-align: justify;
+  font-family: regular;
+  padding: 20px;
+  font-size: 0.7vw;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+.box li{
+  display: inline-block;
+  margin: 6px;
+  list-style: none;
+}
+.box li a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all ease-in-out 250ms;
+}
+.box li a:hover{
+  color: #b9b9b9;
+}
+
+.box .smallfont {
+  font-size: 0.5vw;
+}
+/* ---- about right ---- */
+
+
+.tech-skills{
+  position: absolute;
+  margin-left: 65%;
+  padding-left: 20px;
+}
+
+.tech-skills h1 {
+  font-size: 2vw;
+  font-family: modern;
+  font-weight: 10;
+}
+
+.tech-skills ul {
+  margin-top: 3%;
+  margin-left: 13%;
+}
+.tech-skills li {
+  margin-bottom: 60px;
+  margin: 5%;
+}
+.tech-img {
+  width:25%;
+  height: auto;
+}
+.tech-big {
+  width:15%;
+  height: auto;
+}
+
+#container {
+  perspective: 100px;
+}
+
+#inner{
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+}
+
+
+/* ---- Projects  ---- */
+
+.Projects{
+  padding-bottom: 10%;
+  padding-top: 10%;
+  background-color: #c0c0c0;
+
+}
+
+.neo-space2,
+.neo-space {
+   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.neo-space2 .neo,
+.neo-space .neo {
+  height: 10%;
+  width: 10%;
+  border-radius: 50px;
+  background: #c0c0c0;
+  box-shadow:  20px 20px 60px #a3a3a3, -20px -20px 60px #dddddd;
+  margin-top: 2%;
+  text-align: center;
+  padding: 60px;
+}
+
+.neo-space2 div,
+.neo-space div {
+  margin: 2%;
+}
+
+
+.neo-space2 h1,
+.neo-space h1 {
+  font-size: 1vw;
+  color: #000000;
+  font-family: modern;
+}
+
+.neo-space2 p,
+.neo-space p {
+  font-size: 0.5vw;
+  color: #000000;
+  font-family: regular;
+  padding: 10px;
+
+}
+
+.proj-link {
+  color: #000000;
+}
+
+.proj-link:hover,
+
+.proj-link:focus{
+  background: linear-gradient(to top, #ce49f2, #1cc6e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent; 
+}
+
+
+
+/* ----  Demo ---- 
+.Demos{
+  width: 100%;
+  height: 100%;
+  background-color: #c0c0c0;
+
+}
+
+.instructions .dis {
+  font-family: regular;
+  color: red;
+  font-size: 0.7vw;
+
+
+}
+
+.Demo .frame {
+ margin-left: 1%;
+ list-style: inside;
+}
+.Demo .pictures {
+  margin-left: ;
+}
+
+
+*/
+
+
+
+.Demo{
+  width: 100%;
+  height: 100%;
+  background-color: #c0c0c0;
+
+}
+
+.Demos2,
+.Demos{
+   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Demos div,
+.Demos2 div {
+  margin: 1%;
+}
+
+.dis {
+  font-family: regular;
+  color: red;
+  font-size: 0.7vw;
+  
+
+
+}
+
+.frame img {
+  width: 85%;
+}
+
+.Contact {
+  padding: 10% 0;
+  background-color: #c0c0c0;
+}
+
+.Contact iframe {
+  width: 25%;
+  justify-content: center;
+}
